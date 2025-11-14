@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Image from "next/image";
-import questionImage from "../../assets/question-image1.png"; // adjust path if needed
+import questionImage from "../../assets/question-image1.png";
 
 const FAQSection = () => {
   const faqs = [
@@ -104,10 +104,9 @@ const FAQSection = () => {
             <Image
               src={questionImage}
               alt="question thinking image"
-              className=""
-              width={500} // adjust based on your design
-              height={500} // adjust based on your design
-              priority // optional, for faster load
+              width={500}
+              height={500}
+              priority
             />
           </div>
         </div>
