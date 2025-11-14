@@ -5,8 +5,13 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Image from "next/image";
 import questionImage from "../../assets/question-image1.png";
 
-const FAQSection = () => {
-  const faqs = [
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const FAQSection: React.FC = () => {
+  const faqs: FAQ[] = [
     {
       question: "Can I create a resume for free?",
       answer:
@@ -29,9 +34,9 @@ const FAQSection = () => {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
